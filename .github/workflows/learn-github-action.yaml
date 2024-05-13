@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 */24 * * *' # 24마다 시간 실행
+  workflow_dispatch:
+    
 jobs:
   python-hello-world:
     runs-on: ubuntu-latest
